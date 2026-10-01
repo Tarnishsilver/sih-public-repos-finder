@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import { Trophy, Search as SearchIcon } from "lucide-react";
+import { Trophy, Search as SearchIcon, SlidersHorizontal } from "lucide-react";
 
 function GithubIcon({ size = 18 }: { size?: number }) {
   return (
@@ -209,7 +209,7 @@ export default function App() {
         {hasResults || loading ? (
           <div className="content-layout">
             {/* Left Sidebar */}
-            <aside>
+            <aside id="sidebar-filters">
               {hasResults ? (
                 <FilterBar
                   filters={filters}
@@ -254,17 +254,31 @@ export default function App() {
                     <span className="results-count">{visible.length}</span>
                   ) : null}
                 </span>
-                <div className="sort-select">
-                  <span>Sort by:</span>
-                  <select
-                    value={filters.sort}
-                    onChange={(e) =>
-                      setFilters({ ...filters, sort: e.target.value as Filters["sort"] })
-                    }
+                <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+                  <button
+                    type="button"
+                    className="mobile-filter-link"
+                    onClick={() => {
+                      document.getElementById("sidebar-filters")?.scrollIntoView({ behavior: "smooth" });
+                    }}
+                    aria-label="Filter repositories"
                   >
-                    <option value="updated">Recently updated</option>
-                    <option value="stars">Most stars</option>
-                  </select>
+                    <SlidersHorizontal size={14} />
+                    <span>Filters</span>
+                    {hasActiveFilters ? <span className="mobile-filter-badge" /> : null}
+                  </button>
+                  <div className="sort-select">
+                    <span>Sort by:</span>
+                    <select
+                      value={filters.sort}
+                      onChange={(e) =>
+                        setFilters({ ...filters, sort: e.target.value as Filters["sort"] })
+                      }
+                    >
+                      <option value="updated">Recently updated</option>
+                      <option value="stars">Most stars</option>
+                    </select>
+                  </div>
                 </div>
               </div>
 
