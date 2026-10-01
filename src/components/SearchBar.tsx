@@ -42,7 +42,7 @@ export function SearchBar({
   }, [onChange, onClear]);
 
   return (
-    <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
+    <div style={{ display: "flex", flexDirection: "column", gap: "12px", width: "100%" }}>
       <div className="search-input-wrapper">
         <Search size={20} style={{ color: "#94a3b8", flexShrink: 0 }} aria-hidden />
         <input

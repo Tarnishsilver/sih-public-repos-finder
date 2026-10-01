@@ -159,12 +159,7 @@ export default function App() {
         </nav>
 
         {/* Hero Content */}
-        <div style={{
-          textAlign: "center",
-          padding: "48px 24px 80px",
-          position: "relative",
-          zIndex: 1,
-        }}>
+        <div className="hero-content">
           <h1 className="hero-title animate-fade-in">
             Find Hackathon<br />
             Prototypes
