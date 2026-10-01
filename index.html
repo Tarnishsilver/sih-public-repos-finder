@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Security Headers -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+    <!-- Primary SEO Meta Tags -->
+    <title>SIH Prototype Finder — Discover Hackathon Projects & Solutions</title>
+    <meta name="title" content="SIH Prototype Finder — Discover Hackathon Projects & Solutions" />
+    <meta
+      name="description"
+      content="Explore thousands of Smart India Hackathon prototypes, open-source repositories, reference implementations, and problem statement solutions on GitHub."
+    />
+    <meta
+      name="keywords"
+      content="Smart India Hackathon, SIH prototypes, SIH repositories, SIH problem statements, SIH projects, hackathon solutions, GitHub open source, student prototypes, AI hackathon, blockchain SIH, IoT prototypes"
+    />
+    <meta name="author" content="SIH Prototype Finder" />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <meta name="theme-color" content="#2563eb" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="SIH Prototype Finder" />
+    <meta property="og:title" content="SIH Prototype Finder — Discover Hackathon Projects & Solutions" />
+    <meta
+      property="og:description"
+      content="Search and explore thousands of Smart India Hackathon open-source repositories, reference implementations, and codebases on GitHub."
+    />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="SIH Prototype Finder — Discover Hackathon Projects & Solutions" />
+    <meta
+      name="twitter:description"
+      content="Search across thousands of Smart India Hackathon repositories and problem statement prototypes on GitHub."
+    />
+
+    <!-- Google Fonts Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- AEO & Search Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "name": "SIH Prototype Finder",
+            "description": "Find Smart India Hackathon prototypes, reference implementations, and problem statement solutions.",
+            "url": "https://sih-prototypes.vercel.app/",
+            "potentialAction": {
+              "@type": "SearchAction",
+              "target": {
+                "@type": "EntryPoint",
+                "urlTemplate": "/?q={search_term_string}"
+              },
+              "query-input": "required name=search_term_string"
+            }
+          },
+          {
+            "@type": "SoftwareApplication",
+            "name": "SIH Prototype Finder",
+            "applicationCategory": "DeveloperApplication",
+            "operatingSystem": "All",
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "USD"
+            }
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What is SIH Prototype Finder?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "SIH Prototype Finder is an open search platform that indexes and surfaces public GitHub prototypes, repositories, and solutions built for Smart India Hackathon problem statements."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How can I search for a specific SIH problem statement?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "You can type problem statement IDs such as SIH26161, SIH26011, or keywords like 3D ULPIN, AI Attendance, or Healthcare into the search bar to find matching GitHub prototypes and repositories."
+                }
+              }
+            ]
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

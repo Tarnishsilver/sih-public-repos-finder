@@ -1,0 +1,10 @@
+node_modules/
+dist/
+.vite/
+
+# Never commit a GitHub token. In Vite, any VITE_-prefixed variable is
+# inlined into the public JavaScript bundle, so a token placed here would be
+# readable by every visitor. This app is anonymous in the browser by design.
+.env
+.env.local
+.env.*.local

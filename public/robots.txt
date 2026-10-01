@@ -1,0 +1,30 @@
+# robots.txt for SIH Prototype Finder
+User-agent: *
+Allow: /
+
+# Allow AI crawlers for Answer Engine Optimization (AEO)
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+Sitemap: /sitemap.xml
