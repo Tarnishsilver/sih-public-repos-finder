@@ -416,6 +416,253 @@ body {
   border-color: var(--color-accent);
 }
 
+/* ── Main Content Actions & Export ── */
+.main-content-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.export-dropdown-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.export-trigger-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  font-family: inherit;
+  color: var(--color-accent);
+  background: #ffffff;
+  border: 1.5px solid var(--color-accent);
+  border-radius: 8px;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 1px 3px rgba(37, 99, 235, 0.12), 0 1px 2px rgba(0, 0, 0, 0.04);
+  white-space: nowrap;
+  user-select: none;
+}
+
+.export-trigger-btn:hover {
+  border-color: var(--color-accent-dark);
+  color: var(--color-accent-dark);
+  background: #f0f7ff;
+  box-shadow: 0 3px 10px rgba(37, 99, 235, 0.2);
+}
+
+.export-trigger-btn:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 1px;
+}
+
+.export-trigger-btn.active {
+  border-color: var(--color-accent);
+  background: #eff6ff;
+  color: var(--color-accent);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+}
+
+.export-trigger-btn.success {
+  border-color: #16a34a;
+  background: #f0fdf4;
+  color: #16a34a;
+  box-shadow: 0 0 0 2px rgba(22, 163, 74, 0.2);
+}
+
+.export-badge {
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 1px 6px;
+  background: #eff6ff;
+  color: var(--color-accent);
+  border: 1px solid #bfdbfe;
+  border-radius: 9999px;
+  transition: all 0.2s ease;
+}
+
+.export-trigger-btn:hover .export-badge,
+.export-trigger-btn.active .export-badge {
+  background: #dbeafe;
+  color: var(--color-accent);
+}
+
+.export-trigger-btn.success .export-badge {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.export-chevron {
+  color: var(--color-text-muted);
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.export-chevron.rotate {
+  transform: rotate(180deg);
+}
+
+.export-menu {
+  position: absolute;
+  top: calc(100% + 6px);
+  right: 0;
+  z-index: 60;
+  width: 280px;
+  max-width: min(300px, calc(100vw - 32px));
+  background: #ffffff;
+  border: 1.5px solid var(--color-accent);
+  border-radius: 12px;
+  box-shadow:
+    0 10px 25px -5px rgba(37, 99, 235, 0.16),
+    0 8px 10px -6px rgba(0, 0, 0, 0.06);
+  padding: 6px;
+}
+
+.export-menu-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 10px 8px;
+  border-bottom: 1px solid var(--color-edge);
+  margin-bottom: 6px;
+}
+
+.export-menu-title {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+
+.export-menu-subtitle {
+  font-size: 0.72rem;
+  color: var(--color-text-secondary);
+  font-weight: 500;
+}
+
+.export-menu-items {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.export-menu-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid var(--color-edge);
+  background: #ffffff;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.15s ease;
+  font-family: inherit;
+}
+
+.export-menu-item:hover {
+  background: #f8fafc;
+  border-color: var(--color-accent);
+  box-shadow: 0 1px 3px rgba(37, 99, 235, 0.08);
+}
+
+.export-menu-item:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: -1px;
+}
+
+.export-item-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  flex-shrink: 0;
+  transition: transform 0.15s ease;
+}
+
+.export-menu-item:hover .export-item-icon {
+  transform: scale(1.05);
+}
+
+.export-item-icon.excel {
+  background: #ecfdf5;
+  color: #059669;
+}
+
+.export-item-icon.txt {
+  background: #eff6ff;
+  color: #2563eb;
+}
+
+.export-item-icon.json {
+  background: #fffbeb;
+  color: #d97706;
+}
+
+.export-item-details {
+  flex: 1;
+  min-width: 0;
+}
+
+.export-item-name {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  line-height: 1.3;
+}
+
+.export-item-desc {
+  font-size: 0.72rem;
+  color: var(--color-text-secondary);
+  line-height: 1.3;
+  margin-top: 1px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.export-done-tag {
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: #16a34a;
+  background: #dcfce7;
+  padding: 1px 6px;
+  border-radius: 4px;
+}
+
+@media (max-width: 640px) {
+  .main-content-header {
+    gap: 10px;
+  }
+
+  .main-content-actions {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .sort-select {
+    margin-left: auto;
+  }
+
+  .export-menu {
+    right: auto;
+    left: 0;
+    width: calc(100vw - 48px);
+    max-width: 290px;
+  }
+}
+
 /* ── Repo Cards Grid ── */
 .card-grid {
   display: grid;

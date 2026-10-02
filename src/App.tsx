@@ -20,6 +20,7 @@ import { SearchBar } from "./components/SearchBar";
 import { SkeletonCard } from "./components/SkeletonCard";
 import { StarterSearches } from "./components/StarterSearches";
 import { StatsStrip } from "./components/StatsStrip";
+import { ExportButton } from "./components/ExportButton";
 import { useSearch } from "./hooks/useSearch";
 import type { Scope, RepoItem } from "./lib/api";
 import { DEFAULT_FILTERS, supportsStars, type Filters } from "./lib/filters";
@@ -249,7 +250,10 @@ export default function App() {
                     <span className="results-count">{visible.length}</span>
                   ) : null}
                 </span>
-                <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+                <div className="main-content-actions">
+                  {visible.length > 0 ? (
+                    <ExportButton items={visible} query={query} />
+                  ) : null}
                   <button
                     type="button"
                     className="mobile-filter-link"
